@@ -1,7 +1,6 @@
 //
 //  LoginViewController.swift
 //  ChatsApp
-//
 //  Created by Gurjeet kaur on 2020-03-27.
 //  Copyright © 2020 The Lambton. All rights reserved.
 
@@ -54,42 +53,7 @@ class LoginViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
-    
-    @objc func handleRegister()
-    {
-        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else
-         {
-            print ("form is not valid")
-            return
-        }
-       
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-            if error != nil{
-                print(error)
-                return
-            }
-            
-            //successfully authenticated the user
-            var ref: DatabaseReference!
-            ref = Database.database().reference(fromURL: "https://gameofchats-f39d7.firebaseio.com")
-            let usersReference = ref.child("user").childByAutoId()
-            
-         
-            let values = ["name": name ,"email": email]
-            usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
-                if  err != nil{
-                    print(err)
-                    return
-                }
-                self.dismiss(animated: true, completion: nil)
-                
-            })
-            
-            
-        })
-        print(123)
-    }
+
     
     let nameTextField:UITextField =
     {
@@ -138,14 +102,19 @@ class LoginViewController: UIViewController {
         return view
     }()
     
-    let profileImageView:UIImageView =
+  lazy var profileImageView:UIImageView =
     {
         let ImageView = UIImageView()
         ImageView.image = UIImage(named:"dribbble")
         ImageView.translatesAutoresizingMaskIntoConstraints = false
         ImageView.contentMode = .scaleAspectFill
+        ImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleProfilImageView)))
+        ImageView.isUserInteractionEnabled = true
+        
         return ImageView
     }()
+    
+    
     
     let loginRegisterSegmentedControl: UISegmentedControl =
     {

@@ -17,6 +17,7 @@
 		C840D9EF242EA4C700ED2626 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C840D9EE242EA4C700ED2626 /* GoogleService-Info.plist */; };
 		C85400F924393770008D435A /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85400F824393770008D435A /* NewMessageController.swift */; };
 		C85400FC24395025008D435A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85400FB24395025008D435A /* User.swift */; };
+		C89A5DAA24D63B62004CEE3D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A5DA924D63B62004CEE3D /* Extension.swift */; };
 		C8DAA04C243A63DA0040A460 /* LoginControllerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DAA04B243A63DA0040A460 /* LoginControllerHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		C840D9EE242EA4C700ED2626 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C85400F824393770008D435A /* NewMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
 		C85400FB24395025008D435A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C89A5DA924D63B62004CEE3D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C8DAA04B243A63DA0040A460 /* LoginControllerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 		C840D9CD242E9BE900ED2626 = {
 			isa = PBXGroup;
 			children = (
+				C89A5DA824D63B42004CEE3D /* Helper */,
 				C85400FA24395007008D435A /* Model */,
 				C840D9D8242E9BE900ED2626 /* ChatsApp */,
 				C840D9D7242E9BE900ED2626 /* Products */,
@@ -117,6 +120,14 @@
 				C85400FB24395025008D435A /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C89A5DA824D63B42004CEE3D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C89A5DA924D63B62004CEE3D /* Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 			files = (
 				C8DAA04C243A63DA0040A460 /* LoginControllerHandler.swift in Sources */,
 				C85400F924393770008D435A /* NewMessageController.swift in Sources */,
+				C89A5DAA24D63B62004CEE3D /* Extension.swift in Sources */,
 				C840D9ED242E9CDF00ED2626 /* LoginViewController.swift in Sources */,
 				C840D9DC242E9BE900ED2626 /* MessageViewController.swift in Sources */,
 				C85400FC24395025008D435A /* User.swift in Sources */,
